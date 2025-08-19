@@ -1,0 +1,2 @@
+# Deploy [ChartGemma](https://huggingface.co/ahmed-masry/chartgemma) on Azure ML
+[Deploy Vision Language Models (VLMs) on Azure AI](https://huggingface.co/docs/microsoft-azure/en/azure-ai/examples/deploy-vision-language-models) 참조.
