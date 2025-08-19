@@ -1,0 +1,2 @@
+- [Create a data asset: Folder type](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-create-data-assets?view=azureml-api-2&tabs=python#create-a-data-asset-folder-type)
+- [Data Source: ahmed-masry/ChartQA](https://huggingface.co/datasets/ahmed-masry/ChartQA)
