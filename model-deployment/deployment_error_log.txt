@@ -1,0 +1,188 @@
+hf-cg-ep-1755665171 관련 deployment log
+
+Instance status:
+SystemSetup: Succeeded
+UserContainerImagePull: Succeeded
+: 
+UserContainerStart: InProgress
+
+Container events:
+Kind: Pod, Name: Pulling, Type: Normal, Time: 2025-08-20T04:52:42.212622Z, Message: Start pulling container image
+Kind: Pod, Name: Pulled, Type: Normal, Time: 2025-08-20T04:56:27.598739Z, Message: Container image is pulled successfully
+Kind: Pod, Name: Created, Type: Normal, Time: 2025-08-20T04:56:27.606534Z, Message: Created container inference-server
+Kind: Pod, Name: Started, Type: Normal, Time: 2025-08-20T04:56:27.782603Z, Message: Started container inference-server
+
+Container logs:
+[2m2025-08-20T04:56:27.799736Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Args {
+    model_id: "ahmed-masry/chartgemma",
+    revision: Some(
+        "main",
+    ),
+    validation_workers: 2,
+    sharded: None,
+    num_shard: None,
+    quantize: None,
+    speculate: None,
+    dtype: None,
+    kv_cache_dtype: None,
+    trust_remote_code: false,
+    max_concurrent_requests: 128,
+    max_best_of: 2,
+    max_stop_sequences: 4,
+    max_top_n_tokens: 5,
+    max_input_tokens: None,
+    max_input_length: None,
+    max_total_tokens: None,
+    waiting_served_ratio: 0.3,
+    max_batch_prefill_tokens: None,
+    max_batch_total_tokens: None,
+    max_waiting_tokens: 20,
+    max_batch_size: None,
+    cuda_graphs: None,
+    hostname: "mir-user-pod-bd3742fca5944cf4ac17cc84db11e7dd000000",
+    port: 80,
+    prometheus_port: 9000,
+    shard_uds_path: "/tmp/text-generation-server",
+    master_addr: "localhost",
+    master_port: 29500,
+    huggingface_hub_cache: None,
+    weights_cache_override: None,
+    disable_custom_kernels: false,
+    cuda_memory_fraction: 1.0,
+    rope_scaling: None,
+    rope_factor: None,
+    json_output: false,
+    otlp_endpoint: None,
+    otlp_service_name: "text-generation-inference.router",
+    cors_allow_origin: [],
+    api_key: None,
+    watermark_gamma: None,
+    watermark_delta: None,
+    ngrok: false,
+    ngrok_authtoken: None,
+    ngrok_edge: None,
+    tokenizer_config_path: None,
+    disable_grammar_support: false,
+    env: false,
+    max_client_batch_size: 4,
+    lora_adapters: None,
+    usage_stats: On,
+    payload_limit: 2000000,
+    enable_prefill_logprobs: false,
+    graceful_termination_timeout: 90,
+}
+[2m2025-08-20T04:56:29.669874Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Disabling prefix caching because of VLM model
+[2m2025-08-20T04:56:29.669900Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Forcing attention to 'paged' because head dim is not supported by flashinfer, also disabling prefix caching
+[2m2025-08-20T04:56:29.669904Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Using attention paged - Prefix caching 0
+[2m2025-08-20T04:56:29.686122Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Unkown compute for card tesla-t4
+[2m2025-08-20T04:56:29.701725Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Default `max_batch_prefill_tokens` to 4096
+[2m2025-08-20T04:56:29.701741Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Using default cuda graphs [1, 2, 4, 8, 16, 32]
+[2m2025-08-20T04:56:29.701866Z[0m [32m INFO[0m [1mdownload[0m: [2mtext_generation_launcher[0m[2m:[0m Starting check and download process for ahmed-masry/chartgemma
+[2m2025-08-20T04:56:34.366177Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Download file: model-00001-of-00003.safetensors
+[2m2025-08-20T04:56:40.913710Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Downloaded /data/hub/models--ahmed-masry--chartgemma/snapshots/94edd6220b1ee97de5227198d53506133ccfcb9a/model-00001-of-00003.safetensors in 0:00:06.
+[2m2025-08-20T04:56:40.913781Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Download: [1/3] -- ETA: 0:00:12
+[2m2025-08-20T04:56:40.914072Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Download file: model-00002-of-00003.safetensors
+[2m2025-08-20T04:56:47.369850Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Downloaded /data/hub/models--ahmed-masry--chartgemma/snapshots/94edd6220b1ee97de5227198d53506133ccfcb9a/model-00002-of-00003.safetensors in 0:00:06.
+[2m2025-08-20T04:56:47.369948Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Download: [2/3] -- ETA: 0:00:06.500000
+[2m2025-08-20T04:56:47.370263Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Download file: model-00003-of-00003.safetensors
+[2m2025-08-20T04:56:50.557235Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Downloaded /data/hub/models--ahmed-masry--chartgemma/snapshots/94edd6220b1ee97de5227198d53506133ccfcb9a/model-00003-of-00003.safetensors in 0:00:03.
+[2m2025-08-20T04:56:50.557314Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Download: [3/3] -- ETA: 0
+[2m2025-08-20T04:56:51.378956Z[0m [32m INFO[0m [1mdownload[0m: [2mtext_generation_launcher[0m[2m:[0m Successfully downloaded weights for ahmed-masry/chartgemma
+[2m2025-08-20T04:56:51.379184Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Starting shard [2m[3mrank[0m[2m=[0m0[0m
+[2m2025-08-20T04:56:56.065056Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Using prefix caching = False
+[2m2025-08-20T04:56:56.065104Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Using Attention = paged
+[2m2025-08-20T04:57:01.397816Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2025-08-20T04:57:11.406536Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2025-08-20T04:57:19.992413Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Prefill chunking is only supported with `flashinfer` or `flashdecoding` or `flashdecoding-ipex` attention types.
+[2m2025-08-20T04:57:19.992480Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Using prefill chunking = False
+[2m2025-08-20T04:57:20.486862Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Server started at unix:///tmp/text-generation-server-0
+[2m2025-08-20T04:57:20.520409Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Shard ready in 29.132710452s [2m[3mrank[0m[2m=[0m0[0m
+[2m2025-08-20T04:57:20.609901Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Starting Webserver
+[2m2025-08-20T04:57:20.641828Z[0m [32m INFO[0m [2mtext_generation_router_v3[0m[2m:[0m [2mbackends/v3/src/lib.rs[0m[2m:[0m[2m125:[0m Warming up model
+[2m2025-08-20T04:57:20.838072Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Using optimized Triton indexing kernels.
+[2m2025-08-20T04:57:21.738046Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m image_id 0 start_idx 0 end_idx 1024, length 1024
+[2m2025-08-20T04:57:22.203785Z[0m [31mERROR[0m [2mtext_generation_launcher[0m[2m:[0m Method Warmup encountered an error.
+Traceback (most recent call last):
+  File "/usr/src/.venv/bin/text-generation-server", line 10, in <module>
+    sys.exit(app())
+  File "/usr/src/.venv/lib/python3.11/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+  File "/usr/src/.venv/lib/python3.11/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/src/.venv/lib/python3.11/site-packages/typer/core.py", line 740, in main
+    return _main(
+  File "/usr/src/.venv/lib/python3.11/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+  File "/usr/src/.venv/lib/python3.11/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/usr/src/.venv/lib/python3.11/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/src/.venv/lib/python3.11/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/usr/src/.venv/lib/python3.11/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+  File "/usr/src/server/text_generation_server/cli.py", line 119, in serve
+    server.serve(
+  File "/usr/src/server/text_generation_server/server.py", line 313, in serve
+    asyncio.run(
+  File "/root/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+  File "/root/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/root/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "/root/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+  File "/root/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+  File "/root/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/src/.venv/lib/python3.11/site-packages/grpc_interceptor/server.py", line 165, in invoke_intercept_method
+    return await self.intercept(
+> File "/usr/src/server/text_generation_server/interceptor.py", line 24, in intercept
+    return await response
+  File "/usr/src/.venv/lib/python3.11/site-packages/opentelemetry/instrumentation/grpc/_aio_server.py", line 120, in _unary_interceptor
+    raise error
+  File "/usr/src/.venv/lib/python3.11/site-packages/opentelemetry/instrumentation/grpc/_aio_server.py", line 111, in _unary_interceptor
+    return await behavior(request_or_iterator, context)
+  File "/usr/src/server/text_generation_server/server.py", line 142, in Warmup
+    self.model.warmup(batch, max_input_tokens, max_total_tokens)
+  File "/usr/src/server/text_generation_server/models/flash_causal_lm.py", line 1548, in warmup
+    _, _batch, _ = self.generate_token(batch)
+  File "/root/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+  File "/usr/src/server/text_generation_server/models/flash_causal_lm.py", line 1931, in generate_token
+    out, speculative_logits = self.forward(batch, adapter_data)
+  File "/usr/src/server/text_generation_server/models/vlm_causal_lm.py", line 1065, in forward
+    logits, speculative_logits = self.model.forward(
+  File "/usr/src/server/text_generation_server/models/custom_modeling/flash_pali_gemma_modeling.py", line 117, in forward
+    hidden_states = self.text_model.model(
+  File "/usr/src/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/src/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/src/server/text_generation_server/models/custom_modeling/flash_gemma_modeling.py", line 404, in forward
+    hidden_states, residual = layer(
+  File "/usr/src/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/src/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/src/server/text_generation_server/models/custom_modeling/flash_gemma_modeling.py", line 335, in forward
+    attn_output = self.self_attn(
+  File "/usr/src/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/src/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/src/server/text_generation_server/models/custom_modeling/flash_gemma_modeling.py", line 237, in forward
+    attn_output = attention(
+  File "/usr/src/server/text_generation_server/layers/attention/cuda.py", line 333, in attention
+    flash_attn_cuda.fwd(
+RuntimeError: Expected q_dtype == torch::kFloat16 || ((is_sm8x || is_sm90) && q_dtype == torch::kBFloat16) to be true, but got false.  (Could this error message be improved?  If so, please report an enhancement request to PyTorch.)
+[2m2025-08-20T04:57:22.204366Z[0m [31mERROR[0m [1mwarmup[0m[1m{[0m[3mmax_input_length[0m[2m=[0mNone [3mmax_prefill_tokens[0m[2m=[0m4096 [3mmax_total_tokens[0m[2m=[0mNone [3mmax_batch_size[0m[2m=[0mNone[1m}[0m[2m:[0m[1mwarmup[0m[2m:[0m [2mtext_generation_router_v3::client[0m[2m:[0m [2mbackends/v3/src/client/mod.rs[0m[2m:[0m[2m45:[0m Server error: Expected q_dtype == torch::kFloat16 || ((is_sm8x || is_sm90) && q_dtype == torch::kBFloat16) to be true, but got false.  (Could this error message be improved?  If so, please report an enhancement request to PyTorch.)
+Error: Backend(Warmup(Generation("Expected q_dtype == torch::kFloat16 || ((is_sm8x || is_sm90) && q_dtype == torch::kBFloat16) to be true, but got false.  (Could this error message be improved?  If so, please report an enhancement request to PyTorch.)")))
+[2m2025-08-20T04:57:22.234271Z[0m [31mERROR[0m [2mtext_generation_launcher[0m[2m:[0m Webserver Crashed
+[2m2025-08-20T04:57:22.234295Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Shutting down shards
+[2m2025-08-20T04:57:22.321946Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Terminating shard [2m[3mrank[0m[2m=[0m0[0m
+[2m2025-08-20T04:57:22.321980Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to gracefully shutdown [2m[3mrank[0m[2m=[0m0[0m
+[2m2025-08-20T04:57:24.123441Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m shard terminated [2m[3mrank[0m[2m=[0m0[0m
+Error: WebserverFailed
