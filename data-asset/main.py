@@ -50,6 +50,6 @@ print("✅ Successfully created Data asset object!")
 ml_client.data.create_or_update(my_data)
 print(f"✅ Successfully created {my_data.name} in Azure ML workspace!")
 
-# Your file exceeds 100 MB. If you experience low speeds, latency, or broken connections, we recommend using the AzCopyv10 tool for this file transfer.
-# Example: azcopy copy 'C:\Users\t-yooyeunkim\OneDrive - Microsoft\Desktop\Projects\MS2025-Chart-VLLM\data-asset\ChartQA-Dataset' 'https://stsagekimaih124916383512.blob.core.windows.net/3c9dc2b3-2ced-40f5-ba00-5101aeeb290f-azureml-blobstore/LocalUpload/e842e34bb09e3a842dfe9e69246792751cdf9522462626cbf40335d67174ea4e/ChartQA-Dataset'
+# Your file exceeds 100 MB. If you experience low speeds, latency, or broken connections, we recommend using the AzCopyv10 tool for this file transfer.       
+# Example: azcopy copy 'C:\Users\t-yooyeunkim\OneDrive - Microsoft\Desktop\Projects\MS2025-Chart-VLLM\data-asset\ChartQA-Dataset' 'https://stsagekimaih912057810561.blob.core.windows.net/e50dcc49-4202-489d-ae4f-22f8078e2c70-azureml-blobstore/LocalUpload/e842e34bb09e3a842dfe9e69246792751cdf9522462626cbf40335d67174ea4e/ChartQA-Dataset'
 # See https://learn.microsoft.com/azure/storage/common/storage-use-azcopy-v10 for more information.
