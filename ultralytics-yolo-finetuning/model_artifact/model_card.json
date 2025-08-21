@@ -1,0 +1,12 @@
+{
+  "task": "image-classification",
+  "classes": {
+    "0": "chart",
+    "1": "nonchart"
+  },
+  "imgsz": 224,
+  "epochs": 30,
+  "ultralytics_version": "8.3.182",
+  "source_run": "runs/classify/chart_nonchart_cls_y11s_1755796203",
+  "weight_file": "best.pt"
+}
