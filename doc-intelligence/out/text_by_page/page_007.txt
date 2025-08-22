@@ -1,0 +1,107 @@
+ChartInstruct-LLaMA2
+ChartGemma
+4.2
+3.79
+3.80 3.82
+3.59
+Human Score
+3.18
+2.80
+2.8
+1.4
+0
+Informativeness
+Factual Correctness
+Structure
+Figure 4: Human evaluation scores on the informative-
+ness, factual correctness, and structure of outputs gener-
+ated by ChartInstruct-LLaMA2 and ChartGemma.
+PaliGemma being strongly aligned leads to better
+understanding and reasoning over the charts. Our
+findings overall indicate that ChartGemma is able
+to produce more informative outputs while also
+being factually correct in terms of long-form an-
+swering or summarization for the charts.
+4.4 Human Evaluation on Summarization
+Though using online LLMs like GPT4 as a judge
+has been shown to have a high correlation with hu-
+man annotation (Zheng et al., 2023), there haven't
+been studies on measuring this correlation explic-
+itly for chart understanding tasks. Hence, to ensure
+our observations, evaluations, and conclusions are
+robust, we perform a human study on the manually
+curated set of 100 charts, 'Web'. Similar to GPT4
+evaluation, we compare the informativeness, fac-
+tual correctness, and structure of the outputs gener-
+ated by ChartGemma with ChartInstruct-LLaMA2.
+We first use ChartInstruct-LLaMA2 and Chart-
+Gemma to generate summaries for these samples
+in the Web set. We then ask 2 different annota-
+tors to rate all the responses based on the above
+metrics (informativeness, factual correctness, struc-
+ture) from 1-5 (5 being the highest) so we can also
+measure agreement between the annotations3. We
+present the outputs randomly to the annotators to
+prevent any biases towards the models and present
+the evaluation results in Fig. 4.
+From Fig. 4, we observe that ChartGemma con-
+sistently outperforms or matches ChartInstruct-
+LLaMA2 on all the metrics, and the findings are in-
+line with those observed when using GPT4 for eval-
+uation (Section 4.3). We observe that ChartGemma
+is equally well structured, yet is more informative
+and significantly more factually correct. Better in-
+formativeness probably stems from the fact that
+ChartGemma is trained on data generated from the
+chart images and not just the underlying data tables,
+enabling it to learn high level trends and concepts
+specific to charts. Furthermore, our instruction-
+tuning data and a strong backbone model promote
+capturing more complex visual elements of charts,
+leading to more factual correctness. Overall, since
+our evaluation is performed on charts sampled ran-
+domly in the wild from the web, ChartGemma's
+strong performance validates its effectiveness as a
+strong candidate in understanding and reasoning
+over real-world charts.
+4.5 Error Analysis and Challenges
+We analyzed the outputs of our model, Chart-
+Gemma, to understand the shortcomings and areas
+for improvement. We have discovered the follow-
+ing three patterns of errors.
+High Resolution Charts Charts with very large, of-
+ten skewed dimensions, present challenges for our
+model, which uses an input resolution of 448x448.
+Resizing these large images can cause written text
+to become unreadable, leading to errors in the pre-
+dicted labels and numerical values, as depicted in
+Fig. 13. Although PaliGemma offers a variant sup-
+porting up to an 896x896 input resolution, it oper-
+ates significantly slower than the 448x448 version,
+making it impractical for use on consumer-level
+machines and GPUs.
+Coding Errors While ChartGemma demonstrated
+state-of-the-art performance on the ChartQA bench-
+mark, excelling in complex numerical reasoning
+and compositional questions, it occasionally gen-
+erates erroneous code that cannot be executed. As
+depicted in Fig. 13, the model sometimes refers to
+undeclared variables within the code. We believe
+that integrating an LLM with enhanced coding ca-
+pabilities could further improve our performance
+on the ChartQA benchmark.
+Charts with Complex Visual Styles Although
+our instruction-tuning corpus predominantly fea-
+tures real-world charts from the broad web, Chart-
+Gemma tends to exhibit lower factual correctness
+and informativeness when evaluated on these charts
+compared to those from specialized websites like
+Pew or Statista, which have less visual diversity.
+This disparity, illustrated in Fig. 3, highlights the
+need for further enhancements to improve the gen-
+eralizability of chart understanding models across
+various visual styles.
+4.6 Convergence of ChartGemma
+We probe the learning dynamics of ChartGemma
+by checking the downstream accuracy with the
+3We found a Cohen's Kappa of 0.538 for the agreement.

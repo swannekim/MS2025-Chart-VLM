@@ -1,0 +1,109 @@
+Dissatisfaction with Mexico's Direction Conti
+Chart
+Patches
+Vision
+Encoder
+Linear
+Projection
+Language Model
+Gemma 2B
+SigLIP 400M
+2003 2007
+mdmaunity 92
+PEW RESEARCH CENTER
+Output
+What's the average of last three values
+in green graph (round to one decimal)?
+8.6
+Figure 2: ChartGemma architecture featuring the SigLIP
+vision encoder and the Gemma-2B language model. Visual
+tokens are depicted in red, prefix tokens in green, and suffix
+tokens in yellow. Full attention is applied between visual and
+prefix tokens (indicated by black lines), while causal attention
+is used for suffix tokens (indicated by purple lines) which are
+generated autoregressively.
+time-series based trends observed in the chart, de-
+scribing the different visual elements such as lines,
+colors, and legends represented by the chart, criti-
+cally analyzing and comparing visual information,
+etc. We present concrete examples in § A.2.
+We use Gemini Flash-1.5 (Team et al., 2023)
+due to its robust multimodal performance, cost-
+effectiveness, and high API rate limits.
+2.3 Key Dataset Characteristics
+To underscore the distinct innovations of our
+dataset relative to prior works, we examine two
+critical elements: the visual attributes and the qual-
+ity of the chart instructions.
+Visual Attributes Our instruction-tuning dataset
+features a wide range of instructions that emphasize
+the visual attributes of chart images. As illustrated
+in Fig. 7 in Appendix A.2, the examples highlight
+various visual elements such as lines, shapes, col-
+ors, trends, chart types, and positions, all of which
+are frequently referenced in real-world scenarios.
+These enhance the model's visual reasoning capa-
+bilities, enabling real-world applications.
+Quality To demonstrate the strength of our ap-
+proach in generating high-quality and accurate in-
+structions, we evaluated 100 randomly sampled
+synthesized instructions. We found that our instruc-
+tions accurately reflected the chart content in 82%
+of the cases, which is a significant improvement
+over the 61% accuracy reported for the ChartIn-
+struct dataset (Masry et al., 2024). Additionally, we
+observed 8% partially correct answers, similar to
+that as reported by ChartInstruct. We attribute this
+improvement in quality to our method's reliance on
+the chart images, rather than using automatically
+generated and often erroneous data tables.
+3
+Modeling and Methodology
+3.1 Architecture
+ChartGemma uses PaliGemma (Beyer et al., 2024)
+as the backbone architecture, which comprises of
+the following two components:
+Vision Encoder: SigLIP (Zhai et al., 2023) is
+a vision transformer (ViT) encoder . Unlike CLIP-
+like ViTs (Radford et al., 2021) which use con-
+trastive loss on large batches of image-text pairs,
+SigLIP is trained on single image-text pairs inde-
+pendently as a binary classification task.
+Language Model: Gemma-2B
+(Team et al.,
+2024) is decoder-only transformer-based (Vaswani
+et al., 2017) LLM trained on 3 trillion tokens with a
+context length of 8,196 tokens. Its pretraining data
+mainly consists of English documents, maths, and
+code, making it suitable for chart understanding
+tasks requiring strong reasoning capabilities.
+We present ChartGemma's architecture in Fig. 2.
+The input image is taken in 448x448 resolution and
+divided into 14x14 pixel patches, each of which is
+fed into the vision encoder as a separate token. The
+outputs from the vision encoder are passed through
+a linear layer that maps the visual features into
+the LLM embedding space. These visual tokens
+are then concatenated with the input text embed-
+dings and passed to Gemma-2B. Unlike previous
+VLLMs (Li et al., 2023) that indiscriminately ap-
+ply a causal mask on all image and text tokens,
+Gemma-2B applies full attention over the input vi-
+sual and text tokens while a causal mask is applied
+on the output tokens. This improves the contextual
+understanding of the image particularly for repre-
+senting complex relationships among objects. We
+believe this property provides further advantages
+when learning representations for chart images con-
+taining numerous nuanced complexities.
+3.2 Training Setup
+Existing chart VLLMs (Meng et al., 2024) typically
+employ a two-stage training approach that requires
+an initial step to align the vision encoder and the
+LLM for understanding chart features, followed
+by instruction-tuning. In contrast, we only use a
+single-stage approach where we directly finetune
+the backbone model on our instruction-tuning data.
+We believe that the first stage is required by cur-
+rent methods as the VLLM backbones are aligned
+using a limited amount of image-text pairs with

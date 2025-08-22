@@ -1,0 +1,98 @@
+ChartGemma: Visual Instruction-tuning for Chart Reasoning in the Wild
+Ahmed Masry **
+Megh Thakkar
+*
+Aayush Bajaj
+Aaryaman Kartha
+Enamul Hoque"
+Shafiq Joty
+*York University, Canada
+MILA - Quebec AI Institute
+Salesforce Research "Nanyang Technological University, Singapore
+{masry20, aarykary, enamulh} @yorku.ca
+{megh.thakkar, aayush.bajaj} @mila.quebec, sjoty@salesforce.com
+arXiv:2407.04172v2 [cs.AI] 4 Nov 2024
+Abstract
+Given the ubiquity of charts as a data anal-
+ysis, visualization, and decision-making tool
+across industries and sciences, there has been
+a growing interest in developing pre-trained
+foundation models as well as general purpose
+instruction-tuned models for chart understand-
+ing and reasoning. However, existing meth-
+ods suffer crucial drawbacks across two crit-
+ical axes affecting the performance of chart
+representation models: they are trained on
+data generated from underlying data tables of
+the charts, ignoring the visual trends and pat-
+terns in chart images, and use weakly aligned
+vision-language backbone models for domain-
+specific training, limiting their generalizability
+when encountering charts in the wild. We ad-
+dress these important drawbacks and introduce
+ChartGemma, a novel chart understanding and
+reasoning model developed over PaliGemma.
+Rather than relying on underlying data ta-
+bles, ChartGemma is trained on instruction-
+tuning data generated directly from chart im-
+ages, thus capturing both high-level trends and
+low-level visual information from a diverse set
+of charts. Our simple approach achieves state-
+of-the-art results across 5 benchmarks span-
+ning chart summarization, question answering,
+and fact-checking, and our elaborate qualitative
+studies on real-world charts show that Chart-
+Gemma generates more realistic and factually
+correct summaries compared to its contempo-
+raries. We release the code, model checkpoints,
+dataset, and demos at https://github.com/vis-
+nlp/ChartGemma.
+1 Introduction
+Language-augmented vision foundation models or
+vision-language models (VLMs) have proven to
+be effective in tackling numerous real-world multi-
+modal tasks such as visual segmentation, caption-
+ing, question answering, and generation and edit-
+ing (Li et al., 2023; Zhu et al., 2023). Though
+these models excel when used for general pur-
+pose applications in the wild, they often fail to
+tackle tasks that require specialized understanding
+and decoding of patterns and visualizations (Han
+et al., 2023). An important domain-specific us-
+age of VLMs is for understanding and reasoning
+over charts, given their ubiquity as a data analy-
+sis, visualization, and decision-making tool across
+businesses, economies, and scientific fields (Hoque
+et al., 2022). This has naturally led to the develop-
+ment of more specialized foundation models pre-
+trained on massive amounts of structured and often
+chart-specific data (Liu et al., 2022; Masry et al.,
+2023). These models are, however, trained on a
+limited source of resources and focus on a specific
+set of tasks, constraining their real-world applica-
+bility (Masry et al., 2024).
+Developing over the success of instruction-
+tuning enabling models to generalize to more tasks
+and applications (Ouyang et al., 2022), there have
+been attempts at 'instruction-tuning' VLMs to en-
+dow them the ability to understand charts in more
+realistic and fundamental settings (Meng et al.,
+2024). These approaches generally depend on
+two crucial factors impacting their effectiveness:
+(i) Instruction-tuning dataset - these methods ei-
+ther use the underlying data tables from existing
+web sources (Masry et al., 2024) or use syntheti-
+cally generated data-tables (Han et al., 2023) from
+LLMs such as GPT-4 (OpenAI, 2023) to curate
+the instruction-tuning data, and (ii) Base model -
+the existing methods either use chart-specific pre-
+trained models like UniChart (Masry et al., 2023)
+or VLMs pre-trained with weak image-text align-
+ment such as LLaVA (Li et al., 2023). However,
+in existing methods, both these factors have criti-
+cal drawbacks impacting their ability to understand
+real-world complex charts.
+Existing methods are restricted to charts that ei-
+ther have an underlying data table or require meth-
+ods to extract them from the charts, often with low
+** Equal contribution.

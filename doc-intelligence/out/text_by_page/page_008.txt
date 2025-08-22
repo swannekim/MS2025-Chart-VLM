@@ -1,0 +1,106 @@
+-- ChartQA-Aug
+ChartQA-Human
+- ChartQA-Average
+ChartFC
+100
+Accuracy
+80
+60
+-
+1
+2
+3
+4
+5
+Number of epochs
+Figure 5: Effect of the number of epochs on instruction-
+tuning ChartGemma. We observe very quick conver-
+gence during training (refer to § 4.6). For ChartQA,
+accuracy is relaxed accuracy (§ 4.1).
+number of instruction-tuning epochs and present
+the trends in Fig. 5. We interestingly observe
+that ChartGemma converges very quickly, with
+the best performance observed at epoch 2. We
+attribute this characteristic to the strong alignment
+of PaliGemma rendering it effective in adapting
+to our relatively generalizable instruction-tuning
+dataset. This indicates that PaliGemma is a very
+efficient backbone for visual instruction-tuning of
+chart data, and might generalize when trained with
+a much larger number of samples as well. We leave
+this exploration as future work.
+5 Related Work
+Chart Representation Learning Chart under-
+standing models initially were either fine-tuned
+from language or vision-language models (Masry
+et al., 2022b; Masry and Hoque, 2021; Lee et al.,
+2022), or pre-trained using chart-specific learning
+objectives (Masry et al., 2023; Liu et al., 2022). Re-
+cently, instruction-tuning of pre-trained VLMs has
+been explored for enhancing the general applicabil-
+ity to charts (Meng et al., 2024; Han et al., 2023;
+Masry et al., 2024; Liu et al., 2023a). Though these
+methods use diverse sources across the web and
+synthetic charts for generating instruction-tuning
+data, they utilize the underlying data table of the
+charts and train a weakly-aligned backbone VLM.
+Chart Modeling Benchmarks With charts be-
+ing the standard medium for data visualization
+and data-driven decision making, diverse bench-
+marks have been proposed to evaluate the abilities
+of LLMs and VLMs on chart understanding. These
+benchmarks range from close-ended tasks such as
+question answering (Methani et al., 2020; Masry
+et al., 2022a) to open-ended generation such as ex-
+planation generation in OpenCQA (Kantharaj et al.,
+2022) and summarization (Shankar et al., 2022).
+Chart-specific benchmarks evaluate the ability of
+models to convert charts into data tables (Choi et al.,
+2019; Masry et al., 2023) or evaluate claims against
+given data as a part of general multimodal fact-
+checking benchmarks (Akhtar et al., 2023a,c).
+Instruction-tuning across modalities and for
+charts Instruction-tuning was proposed to gener-
+alize the abilities of language models across mul-
+tiple tasks (Mishra et al., 2022) and has become a
+common practice for adapting pre-trained LLMs
+to real-world applications(Alpaca, 2023; Chiang
+et al., 2023; Ouyang et al., 2022). The success of
+instruction-tuning for text has led to its adoption as
+a standard process for multimodal VLMs too (Li
+et al., 2023; Zhu et al., 2023; Dai et al., 2023). Re-
+cently, domain-specific instruction-tuning has been
+attempted for charts that requires specially curated
+instruction-tuning data (Han et al., 2023; Masry
+et al., 2024; Meng et al., 2024). These methods use
+the underlying data tables of the chart to synthesize
+the instruction-tuning data. Since the data tables
+of charts are not capable of capturing the nuance
+details of charts, especially for real-world charts
+with complex elements, the instruction-tuning data
+generated using the data tables is not adequate for
+training models to be adept at understanding these
+diverse real-world charts.
+6 Conclusion and Future Work
+In the landscape of rising excitement for chart
+understanding and reasoning models and meth-
+ods, we present ChartGemma, a multimodal
+model instruction-tuned on data generated di-
+rectly from a diverse range of real-world chart
+images using a state-of-the-art backbone architec-
+ture. ChartGemma addresses two crucial shortcom-
+ings of existing instruction-tuned chart models: the
+instruction-tuning data is generated from the un-
+derlying data tables instead of the chart images,
+limiting their adaptability and extendibility to real-
+world, and use weakly aligned backbone models,
+restricting their generalizability. Our simple ap-
+proach yields significant improvements over exist-
+ing chart representation models, with a relatively
+smaller model in terms of number of parameters.
+Our extensive error analyses and human studies
+show that ChartGemma produces more realistic,
+informative, and factually correct outputs as com-
+pared to its contemporaries.
+As future work, we aim to formulate a more
+diverse instruction-tuning dataset which is created

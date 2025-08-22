@@ -1,0 +1,258 @@
+Dataset
+CoT
+Reasoning
+Chart
+Summarization
+Predefined Tasks
+Fact
+Checking
+Chart-to
+Markdown
+Coding
+Abilities
+Trend
+Analysis
+Data
+Comparison
+Open Ended Tasks
+Data
+Interpretation
+Data
+Visualization
+Others
+#Charts
+Synthetic Sources
+PlotQA
+ChartFC
+28000
+Specialized Websites
+Statista
+2688
+4996
+1296
+2377
+42098
+334
+172
+373
+231
+3027
+19748
+Pew
+11951
+4999
+1251
+1784
+10034
+281
+290
+30
+129
+2873
+7401
+OECD
+243
+500
+644
+20838
+357
+39
+47
+69
+31
+489
+21712
+OWID
+717
+500
+375
+2285
+1490
+40
+38
+61
+28
+547
+3803
+ChartCheck (Wikipedia)
+1527
+7603
+98
+96
+178
+65
+1642
+1530
+General Web
+WebCharts
+10576
+50046
+6434
+18216
+3400
+4331
+6283
+4680
+1785
+51436
+50961
+Total
+26,175
+62,241
+45,603
+22,603
+57,379
+792
+6926
+988
+2269
+60,014
+122,857
+Table 4: The number of generated examples for each tasks based on data samples of the mentioned dataset. Some of the charts
+are used in multiple tasks. In the last column, we show the number of distinct charts used for instruction generation samples.
+(1) Chart Summarization
+(2) Coding Abilities
+(3) Comparison
+Generate a caption for the chart:
+The chart titled "Part-time: A Path to Part-time: A path to poverty
+Program of thought: What is the
+Poverty" compares the poverty rates of " ** (
+families with at least one full-time, year-
+ALL UL.S.
+households
+round earner and families with at least
+one part-time/part-year earner, in both
+all US households and female-headed
+households. The poverty rate for all US
+households with at least one part-
+time/part-year earner
+Female-headed
+households
+and minimum demand for 'Other
+advanced flat glass?
+Morte and severe weather
+cold weather and ion monmns
+27.436
+90
+Extreme heat and withret
+1
+11.89%
+3.0%
+demand_2019-965
+max_demand=965
+min_demand=348
+difference=max_demand - min_demand
+print (difference)
+(4) Chain-of-Thought Reasoning
+(5) Fact Checking
+(6) Data Extraction
+What is the ratio of the score of
+"Rep/Lean Rep' to 'Liberal
+Democrats'?
+Republicans and Democrats have similar levels of
+International knowledge
+Can following statement be
+inferred based on the given
+Chart?
+" Devestment intentions rise for first time in the pairs
+Figure 2- China Integration in Global Vilar Chains, by
+The score for 'Rep/Lean Rep' is
+6.5 and the score for 'Liberal
+Democrats' is 7.2. The ratio of
+the score of 'Rep/Lean Rep' to
+'Liberal Democrats' is 6.5/7.2 =
+0.903. Final Answer: 0.903
+Claim: The investment
+intentions of firms remained
+stagnant from 2005 to 2008.
+Verdict: Refutes
+The Grubel-Lloyd index for "Precision
+Instruments' is approximately 0.7.
+(7) Chart-to-Markdown
+(8) Data Visualization
+(9) Fluctuation Description
+Chart to Markdown:
+Hours Claw Anbe sidoonengit Kon Arbeit soumets naid Nota furbe if toarert/ngund
+Imagine you are creating a
+pie chart based on this data.
+What would be the dominant
+slice and how much of the
+pie would it represent?
+Describe the fluctuations in
+Mayne Pharma's stock price
+throughout 2016.
+Mayne Pharma
+closed down 15
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+The dominant slice in the pie
+chart would represent the
+white population and would
+take up 96% of the pie.
+Mayne Pharma's stock price
+fluctuated significantly
+throughout 2016, with periods of
+both increases and decreases
+9
+-
+-
+Source: Bloomberg
+-
+-
+-
+Compare the number of
+major power outages caused
+by hurricanes and tropical
+storms in 1992 and 2004.
+Extreme Weather Is Causing More Major Power Outages
+46.896
+demand_1999=348
+demand_2004 445
+demand_2009=514
+demand_2014=745
+is 27.4%,
+compared to 3.8% for households with
+at least one full-time, year-round earner.
+In female-headed households, the
+poverty rate for families with at least
+one part-time/part-year earner is 46.8% ..
+US Poverty Rata
+In 1992, the number of major
+power outages caused by
+hurricanes and tropical storms
+was around 10. In 2004, the
+number was around 60.
+What is the Grubel-Lloyd index for the
+"Precision Instruments' sector?
+605
+200 6
+1
+-
+mayne pharma
+--
+· unisonai intrmuren
+Figure 6: Diverse examples from our visual instruction-tuning tasks that focuses on the visual attributes of the chart
+images which are highlighted in green.
+difference between the maximum
+Spirits Reviving?
+Fiscal Year to June 30
+5000
+12702
+5000

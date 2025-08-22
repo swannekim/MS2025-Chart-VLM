@@ -1,0 +1,100 @@
+W.S. Healthcare Costs ane High Relatine ta Other Courires
+Multimodal LLM
+Chart Instruction Data
+Visual
+Chart
+Corpus
+Gemini
+Flash 1.5
+What could have caused the
+sharp increase ..
+ChartGemma
+(PaliGemma-3B)
+Instruction-
+tuning
+Explain the distribution of dots in
+the chart ..
+Figure 1: The instruction-tuning data generation process. Chart images are input into Gemini Flash 1.5, which generates visual
+chart instructions used to fine-tune our model, ChartGemma (please refer to § 2).
+ies reveal that ChartGemma generates more
+faithful and human-like summaries and is ex-
+tremely capable in understanding and represent-
+ing complex real-world charts in the wild.
+2 Chart Instruction Data Generation
+In this section, we present the details of generating
+our instruction-tuning dataset. We start by curating
+a diverse corpus of charts that encompasses a range
+of visual styles and elements (§ 2.1), and then use
+it to generate the visual instruction-tuning data di-
+rectly from the charts (§ 2.2). We illustrate our data
+generation pipeline in Fig. 1.
+2.1 Assembling the Chart Corpus
+Our chart corpus is assembled using a combination
+of various sources across three categories: (i) Syn-
+thetically generated charts from sources such as
+PlotQA (Methani et al., 2020), (ii) Curated charts
+from specialized websites such as Statista which
+typically exhibit limited visual diversity, and (iii)
+In-the-wild charts harvested from the broader web,
+such as WebCharts (Masry et al., 2024), noted for
+their extensive stylistic variety. While prior ap-
+proaches used accompanying metadata (e.g., titles,
+data tables, annotations) to generate instructions
+from LLMs (Han et al., 2023; Meng et al., 2024),
+our method exclusively utilizes the chart images
+themselves for generating instruction-tuning data.
+This approach also allows us to bypass the con-
+straints imposed by metadata availability. In total,
+our corpus consists of 122,857 chart images. We
+provide an elaborate breakdown of the chart source
+and the statistics across each category in Table 4.
+2.2 Visual Chart Instructions
+We use chart images directly from the above assem-
+bled corpus to generate visual instruction-tuning
+data. This enables us to synthesize data that can
+train a model to capture not just point information,
+but complex trends and relations among the chart
+elements. Following Masry et al. (2024), we gener-
+ate data across two categories: (i) predefined tasks,
+which align with common real-world scenarios and
+benchmarks, and (ii) open-ended tasks. For pre-
+defined tasks, we generate data for,
+1. Chain-of-thought (CoT) involves prompting
+the model with complex reasoning questions and
+enhances the visual reasoning capabilities of the
+model by guiding it through the problem-solving
+process in a structured manner.
+2. Summarization involves prompting the model
+to generate summaries that succinctly capture the
+key insights and trends from a chart image that
+effectively communicates the primary data narra-
+tives.
+3. Fact Checking asks the model to determine
+whether stated facts are supported or refuted by the
+data presented in a chart image. Alongside data
+generated from our corpus, we use the training sets
+of existing chart fact-checking tasks (Akhtar et al.,
+2023a,c) in our instruction-tuning data.
+4. Chart-to-Markdown tasks the model with gen-
+erating the underlying data tables from a chart im-
+age in Markdown format. This approach simplifies
+rendering and parsing the tables, enhancing their
+accessibility and usability.
+5. Program Aided Design (Gao et al., 2022) re-
+quires the model to generate executable code that
+performs necessary calculations and outputs the fi-
+nal answer, delegating complex and challenging
+mathematical operations to the code interpreter.
+Alongside synthetic data generated from our cor-
+pus, we use the Multimodal LLM to create exe-
+cutable codes for questions in the training split of
+the ChartQA dataset (Masry et al., 2022b), aug-
+menting our instruction-tuning data with human-
+written questions and their corresponding code.
+Open-ended Tasks We enrich our instruction-
+tuning data by prompting the Multimodal LLM
+to generate a variety of tasks typical in real-world
+scenarios. This approach enhances the general-
+izability of our models and extends their appli-
+cability to diverse real-world settings. Example
+open-ended tasks include justifying temporal or

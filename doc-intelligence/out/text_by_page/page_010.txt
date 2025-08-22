@@ -1,0 +1,112 @@
+Wei-Lin Chiang, Zhuohan Li, Zi Lin, Ying Sheng,
+Zhanghao Wu, Hao Zhang, Lianmin Zheng, Siyuan
+Zhuang, Yonghao Zhuang, Joseph E. Gonzalez, Ion
+Stoica, and Eric P. Xing. 2023. Vicuna: An open-
+source chatbot impressing gpt-4 with 90%* chatgpt
+quality.
+J. Choi, Sanghun Jung, Deok Gun Park, J. Choo, and
+N. Elmqvist. 2019. Visualizing for the non-visual:
+Enabling the visually impaired to use visualization.
+Computer Graphics Forum, 38.
+Wenliang Dai, Junnan Li, Dongxu Li, Anthony
+Meng Huat Tiong, Junqi Zhao, Weisheng Wang,
+Boyang Li, Pascale Fung, and Steven Hoi. 2023. In-
+structblip: Towards general-purpose vision-language
+models with instruction tuning.
+Luyu Gao, Aman Madaan, Shuyan Zhou, Uri Alon,
+Pengfei Liu, Yiming Yang, Jamie Callan, and Gra-
+ham Neubig. 2022. Pal: Program-aided language
+models. arXiv preprint arXiv: 2211.10435.
+Yucheng Han, Chi Zhang, Xin Chen, Xu Yang,
+Zhibin Wang, Gang Yu, Bin Fu, and Hanwang
+Zhang. 2023. Chartllama: A multimodal llm for
+chart understanding and generation. arXiv preprint
+arXiv:2311.16483.
+Enamul Hoque, Parsa Kavehzadeh, and Ahmed Masry.
+2022. Chart question answering: State of the art
+and future directions. Journal of Computer Graphics
+Forum (Proc. EuroVis), pages 555-572.
+Shankar Kantharaj, Xuan Long Do, Rixie Tiffany Ko
+Leong, Jia Qing Tan, Enamul Hoque, and Shafiq Joty.
+2022. Opencqa: Open-ended question answering
+with charts. In Proceedings of EMNLP (to appear).
+Kenton Lee, Mandar Joshi, Iulia Turc, Hexiang Hu,
+Fangyu Liu, Julian Eisenschlos, Urvashi Khandel-
+wal, Peter Shaw, Ming-Wei Chang, and Kristina
+Toutanova. 2022. Pix2struct: Screenshot parsing as
+pretraining for visual language understanding. arXiv
+preprint arXiv:2210.03347.
+Chunyuan Li, Cliff Wong, Sheng Zhang, Naoto
+Usuyama, Haotian Liu, Jianwei Yang, Tristan Nau-
+mann, Hoifung Poon, and Jianfeng Gao. 2023. Llava-
+med: Training a large language-and-vision assis-
+tant for biomedicine in one day. arXiv preprint
+arXiv:2306.00890.
+Fangyu Liu, Francesco Piccinno, Syrine Krichene,
+Chenxi Pang, Kenton Lee, Mandar Joshi, Yasemin
+Altun, Nigel Collier, and Julian Martin Eisenschlos.
+2022. Matcha: Enhancing visual language pretrain-
+ing with math reasoning and chart derendering. arXiv
+preprint arXiv:2212.09662.
+Fuxiao Liu, Xiaoyang Wang, Wenlin Yao, Jianshu Chen,
+Kaiqiang Song, Sangwoo Cho, Yaser Yacoob, and
+Dong Yu. 2023a. Mmc: Advancing multimodal
+chart understanding with large-scale instruction tun-
+ing. arXiv preprint arXiv:2311.10774.
+Haotian Liu, Chunyuan Li, Qingyang Wu, and Yong Jae
+Lee. 2023b. Visual instruction tuning. arXiv preprint
+arXiv:2304.08485.
+Ahmed Masry and Enamul Hoque. 2021. Integrating
+image data extraction and table parsing methods for
+chart question answering. Chart Question Answering
+Workshop, in conjunction with the Conference on
+Computer Vision and Pattern Recognition (CVPR),
+pages 1-5.
+Ahmed Masry, Parsa Kavehzadeh, Xuan Long Do, Ena-
+mul Hoque, and Shafiq Joty. 2023. UniChart: A
+universal vision-language pretrained model for chart
+comprehension and reasoning. In Proceedings of the
+2023 Conference on Empirical Methods in Natural
+Language Processing (to appear). Association for
+Computational Linguistics.
+Ahmed Masry, Do Long, Jia Qing Tan, Shafiq Joty,
+and Enamul Hoque. 2022a. ChartQA: A benchmark
+for question answering about charts with visual and
+logical reasoning. In Findings of the Association for
+Computational Linguistics: ACL 2022, pages 2263-
+2279, Dublin, Ireland. Association for Computational
+Linguistics.
+Ahmed Masry, Do Xuan Long, Jia Qing Tan, Shafiq Joty,
+and Enamul Hoque. 2022b. Chartqa: A benchmark
+for question answering about charts with visual and
+logical reasoning. arXiv preprint arXiv:2203.10244.
+Ahmed Masry, Mehrad Shahmohammadi, Md Rizwan
+Parvez, Enamul Hoque, and Shafiq Joty. 2024.
+Chartinstruct: Instruction tuning for chart compre-
+hension and reasoning.
+Fanqing Meng, Wenqi Shao, Quanfeng Lu, Peng Gao,
+Kaipeng Zhang, Yu Qiao, and Ping Luo. 2024. Char-
+tassisstant: A universal chart multimodal language
+model via chart-to-table pre-training and multitask
+instruction tuning. arXiv preprint arXiv:2401.02384.
+Nitesh Methani, Pritha Ganguly, Mitesh M. Khapra,
+and Pratyush Kumar. 2020. Plotqa: Reasoning over
+scientific plots. In Proceedings of the IEEE/CVF Win-
+ter Conference on Applications of Computer Vision
+(WACV).
+Swaroop Mishra, Daniel Khashabi, Chitta Baral, and
+Hannaneh Hajishirzi. 2022. Cross-task generaliza-
+tion via natural language crowdsourcing instructions.
+In Proceedings of the 60th Annual Meeting of the
+Association for Computational Linguistics (Volume
+1: Long Papers), pages 3470-3487, Dublin, Ireland.
+Association for Computational Linguistics.
+OpenAI. 2023. GPT-4 Technical Report.
+Long Ouyang, Jeff Wu, Xu Jiang, Diogo Almeida, Car-
+roll L. Wainwright, Pamela Mishkin, Chong Zhang,
+Sandhini Agarwal, Katarina Slama, Alex Ray, John
+Schulman, Jacob Hilton, Fraser Kelton, Luke Miller,
+Maddie Simens, Amanda Askell, Peter Welinder,
+Paul Christiano, Jan Leike, and Ryan Lowe. 2022.
+Training language models to follow instructions with
+human feedback.

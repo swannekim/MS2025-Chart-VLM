@@ -1,0 +1,217 @@
+Chart Image
+Summary Generated from the Data Table
+Summary Generated from Chart Image
+Red-hot job market
+Jobs by region As of September
+San Francisco
+12 mlkon
+1.114.300
+The Bay Area is approaching its al-time
+-East Bay
+record for total jobs. although Santa
+Clara County could be more than a year
+before it reaches such lofty
+heights.
+1.061.300
+Santa Clara
+County
+1004.800
+100
+"includes San Mateo and Marin counties
+3.7 million
+January 2001
+September:
+36
+Record high for Bay Area
+employment (3.650.000 jobs.)
+15
+September 2001
+Terrorist attacks lead
+to loss of 25.200 jobs
+July 2009
+June 2000
+Largest one
+33 Largest one-
+month loss -
+month gan-
+19.600 jobs
+January 2004
+Low point
+=
+following the
+February 2010
+Record low for Bay Area
+-
+(3.216.800 jobs)
+employment (3,119.500 jobs)
+2000 01 2 03 04 05 06
+Sources: State Employment Development Department, staff research
+BAY AREANEWS GROU
+The data table shows the population of a city or region from
+The chart shows the population milestones of Seattle from 1900 to 2016.
+1900 to 2016. The population grew steadily from 100,000 in The population has been steadily increasing over the years, with significant
+1900 to 550,000 in 1960. After a slight decline in the 1970s, the
+population rebounded and reached 704,352 in 2016.
+booms during the Gold Rush Era, the Boeing Boom, the Microsoft Boom,
+and the Amazon Boom. The population reached 700,000 for the first time
+in 2015. The population peaked at around 600,000 during the Boeing
+Boom in the 1960s, before declining slightly during the Boeing Bust in
+the 1970s. The population increased again during the Microsoft Boom in
+the 1990s and has been steadily increasing ever since. The population of
+Seattle reached 704,352 in 2016. The data is based on U.S. Census Bureau
+data.
+Covid has grown gradually less lethal over the pandemic, mainly due to
+immunity, the majority of which has come via vaccines
+Evolution of Covid's infection fatality ratio in England, overlaid on levels and sources of immmunity
+« ol adulti with antibodies
+Covid IFR
+1.01
+People with immunity
+via vaccination
+vaccinated
+Boostery"
+0.23
+0.13
+of adults who have had Covid
+2020
+2021
+Ap
+-8
+Jan
+5032
+Could IFR calculated using Of's death cert, mentions and Ones intec
+dagrh sert, mentions and DIS infection survey. Method from prior work by Dun Houdon
+Sources: ONS Cambridge MRC. FT graphic: John Burs-Murdoch / oubursmurdoch
+The data table shows the trend of Covid-19 related metrics
+from July 2020 to January 2022. It reveals a decline in the
+Infection Fatality Rate (IFR) from 80% in July 2020 to 25%
+in January 2022. This coincides with a rise in the percentage
+of adults who have had Covid, increasing from 10% in July
+2020 to 60% in January 2022. The percentage of adults with
+antibodies also shows a significant increase, going from 0% in
+July 2020 to 100% in January 2022. These trends suggest a
+possible correlation between increased exposure to Covid-19
+and a lower IFR, likely due to herd immunity and improved
+treatment options.
+This chart shows the evolution of Covid's infection fatality ratio in Eng-
+land, overlaid on levels and sources of immunity. The chart shows that
+the Covid infection fatality ratio has decreased significantly since the
+beginning of the pandemic. This is likely due to the increasing levels of
+immunity in the population, both from vaccination and from infection.
+The chart also shows that the Covid infection fatality ratio has been de-
+clining at a faster rate since the introduction of vaccines. It also shows
+that the most vulnerable groups have been vaccinated and that this has had
+a significant impact on reducing the number of deaths from Covid. The
+infection fatality ratio has also decreased with the introduction of boosters.
+This demonstrates the impact of the vaccine in helping to protect people
+from serious illness and death from Covid.
+Table 1: Summaries generated from the same LLM, Gemini Flash 1.5, when using the data table and the chart image,
+highlighting the importance of understanding the visual attributes to generate more appropriate chart instructions.
+accuracy which are used for instruction-tuning data
+generation. These data tables are often incapable of
+capturing numerous nuanced details in the complex
+charts used in real-world applications (Table 1).
+Also, in many scenarios, we are concerned with
+representing or understanding general trends in the
+charts and not individual data points. On the model
+side, existing methods use backbones in which the
+vision encoder and LLM are weakly-aligned, ei-
+ther due to limited data or architecture, limiting
+their generalizability to represent real-world charts.
+Instruction-tuning a strongly aligned base VLM
+can capture the intricacies among diverse chart ele-
+ments and corresponding text more efficiently. We
+hypothesize that formulating a simple approach
+addressing these drawbacks can lead to an effec-
+tive foundation model capable of complex chart
+understanding and reasoning in the wild.
+We propose ChartGemma, an instruction-tuned
+multimodal model for chart understanding and rea-
+soning. ChartGemma uses instruction-tuning data
+for chart representation learning that is directly
+generated from the chart images, capturing more
+diverse and relevant information while preserving
+complex visual features. This also enables us to uti-
+lize a much broader array of charts available across
+the web as we are not restricted by the availability
+of underlying data tables. ChartGemma develops
+The provided data table shows the total number of jobs in the
+Bay Area, as well as the number of jobs in San Francisco,
+the East Bay, and Santa Clara County, from 2000 to 2026.
+Unfortunately, the table only provides data for the year 2000,
+with the remaining years missing data for all regions except the
+total Bay Area jobs. While we can see the total Bay Area job
+growth from 3.3 million in 2000 to a projected 4.0 million in
+2026, we lack the specific data to assess job trends within San
+The chart shows the job market in the Bay Area from 2000 to 2012. The
+Bay Area is approaching its all-time record for total jobs, although Santa
+Clara County could be more than a year away before it reaches such lofty
+heights. The chart shows that the Bay Area job market experienced a
+significant drop during the Great Recession, but has since recovered and
+is now at an all-time high. The chart also shows the number of jobs in
+different regions of the Bay Area, including San Francisco, East Bay, and
+Santa Clara County. The chart is a good indicator of the overall health of
+the Bay Area economy.
+Seattle population milestones
+Last year, Seattle passed the 700,000 mark for the first time. New census data
+estimate the city's 2016 population at 704,352.
+1,000,000
+AMAZON BOOM
+BOOM
+700,000
+750,000
+BOEING BOOM
+600.000
+500,000
+500,000
+GOLD
+400,000
+RUSH ERA
+-300,000
+250.000
+200,000
+100,0000
+1900 1910 1920 1930 1940 2950 1960 1970
+1980 1990
+2035 2014 2016
+Source: U.S. Comsun Burvon
+THE SEATTLE TIMES
+Vulnerable gros
+Covid IFR
+July 2005
+35.800 jobs
+HoutY'E
+dot com mettoour
+3.566.800 jobs
+Total Bay Area jobs
+Francisco, East Bay, and Santa Clara County over the years. To
+draw meaningful conclusions about job market trends in these
+regions, it is necessary to have complete data for all years and
+all regions.
+over PaliGemma (Beyer et al., 2024) which has
+been trained on a much larger alignment dataset.
+Since ChartGemma uses PaliGemma as its back-
+bone, it is also much smaller than existing chart
+understanding models, making it suitable for real-
+world applications. We evaluate ChartGemma
+across 5 benchmarks spanning chart summariza-
+tion, question answering, and fact-checking, ob-
+taining state-of-the-art results compared to existing
+methods. Our qualitative studies also demonstrate
+that ChartGemma produces more faithful and re-
+alistic summaries of complex charts as compared
+to other methods. Through our elaborate analy-
+sis, we put forward ChartGemma as an effective
+model capable of understanding and reasoning over
+real-world charts. Our main contributions are:
+· We present ChartGemma, a first-of-its-kind mul-
+timodal model instruction-tuned for chart un-
+derstanding and reasoning using data directly
+generated from chart images.
+· ChartGemma utilizes a stronger backbone
+model and more representative instruction-
+tuning data, rendering it effective in tackling ex-
+isting benchmarks across chart summarization,
+question answering, and fact-checking while be-
+ing significantly smaller than its counterparts.
+· Our extensive quantitative and qualitative stud-

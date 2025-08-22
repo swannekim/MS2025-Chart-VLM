@@ -1,0 +1,150 @@
+[1] Data Visualization
+[2] Data Visualization
+[3] Data Visualization
+Describe the shape of the line
+representing property investment.
+Property slump
+China's real estate construction decline
+deepened in the second quarter
+- Property investment
+- Nowystarted pro
+- Newly started property projects, area
+The line representing property investment
+has a generally downward slope, with some
+fluctuations, forming a shape similar to a
+wave
+20
+-
+Some alternative visualizations include: 1. A
+line chart with separate lines for each
+category, allowing for a clear comparison of
+their trends. 2. A stacked bar chart to show
+the combined proportion of respondents in
+each category for each time period. 3. A
+dual-axis chart to compare the 'Ever done'
+category with the 'Past three months'
+category on different y-axis scales.",
+[4] Data Visualization
+[5] Anomaly Detection
+[6] Relationship Analysis
+If you were to create a different
+type of chart to represent this
+data, what type of chart would
+you choose and why?
+A line chart would be a suitable
+alternative to the bar chart in this
+case. It would clearly highlight the
+trend in the number of text
+messages sent over time and make it
+easier to visualize the growth and
+decline periods.
+The sharp decline in container
+transport by rail in Hungary from
+2010 to 2012 stands out as an
+unusual point. This is particularly
+notable considering the overall
+increasing trend in transport
+volume for Hungary.'
+Yes, there seems to be a correlation. Countries
+with higher rankings in 'Starting a business'
+generally have higher rankings in 'Enforcing
+Contract' as well. This suggests that a more
+favorable environment for starting a business
+may also be linked to a stronger legal framework
+for enforcing contracts."
+What's Keeping Investors Away
+India ranks lower than mary Asian peers in case of
+doing business
+Singapore . Malaysia . Thailand . Vietnam = Incia
+Overall Fark
+Starting a business
+Registering Propert
+Enforcing Contrael
+Soursec Wordt Burku/ Bloomberg
+Global Rankings
+[7] Time Series Analysis
+[8] Data Extrapolation
+[9] Data Point Interpretation
+How the population makeup changed in the U.S.
+Identify the dates when the
+black line experiences a
+significant drop in power.
+Assuming the trend continues,
+what could be the possible
+ranking of Covid-19 in
+September?
+What does the topmost layer
+of the chart represent?
+The black line experiences
+significant drops in power
+around March 13th and
+March 21st.
+If the trend continues, the
+ranking of Covid-19 as a cause
+of death in Wales could be even
+lower than 19th in September.
+The topmost layer represents
+the combined population of
+Asian, American Indian, or
+Pacific Islander groups.
+Notes: Oliver ross ane shown in gray: The Census Bureau added a multiracial option in 2000. Data for nach
+group lateint on the chart since then reflect only a single mson or ethnicity.
+Figure 7: Diverse examples from our open-ended instruction-tuning tasks that focuses on the visual attributes of the
+chart images which are highlighted in green.
+Example Prompt - Generate Instruction-tuning data for Program-Aided Design
+Generate numerical and visual question-answer pairs for an LLM that we are trying to tune for Chart Numerical and Visual
+Reasoning. Your response should be in a json format where each example has three fields: input: which only asks a
+numerical/visual question, program of thought: a python program that can be executed to produce the final answer, and
+final answer: which is the final answer to the input question based on the chart image.
+For the final answer X, follow the following instructions:
+* X should contain as few words as possible.
+* Don't paraphrase or reformat the text you see in the image.
+* If the final answer has two or more items, provide it in the list format like [1, 2].
+* When asked to give a ratio, give out the decimal value like 0.25 instead of 1:4.
+* When asked to give a percentage, give out the whole value like 17 instead of decimal
+like 0.17%
+* Don't include any units in the answer.
+* Try to include the full label from the graph when asked about an entity.
+Generate ten questions that contain some numerical operations such as, but not limited to, max, min, sum, average,
+difference, ratio, median, mode, .. etc. Generate another five questions that not only have numerical operations, but also
+some visual aspects such as leftmost, rightmost, top, bottom, middle, peak, colors, .. etc. Generate five simple data
+retrieval questions that ask about values, x-labels, or legend labels from the chart. Generate another five yes/no
+numerical reasoning questions whose answers must be either Yes or No. Generate another four questions that ask to count
+some elements in the chart (e.g., the number of bars/pie slices/colors/x-labels) .
+Remember that the program of thought must be an executable python code that solves the question step by step and prints
+the answer in the end.
+Figure 8: Prompt to generate instruction-tuning data for the program-aided design task using Gemini Flash-1.5.
+Example Prompt - Generate Instruction-tuning data for Open-ended Tasks
+Generate different instruction-tuning tasks for an LLM that we are trying to tune for Chart Understanding. Your response
+should be in a json format where each example has three fields: task type, input: which only asks a question or an
+instruction related to the task type and the given chart, and expected output: which is the answer to the input
+question/instruction based on the input information. Use the following chart image to generate 10 unique tasks
+Figure 9: Prompt to generate instruction-tuning data for open-ended tasks using Gemini Flash-1.5.
+Suggest an alternative way to
+visualize the data that could provide
+more insight into the walking and
+cycling habits across the countries
+What are some alternative ways to
+visualize this data to highlight the
+differences in the trends between the
+two categories?
+A scatter plot could be used to visualize the
+relationship between the proportion of
+people who walk or bicycle 'all of the time'
+and the proportion of people who walk or
+bicycle 'often' for each country. This could
+help identify any patterns or correlations
+between the two proportions and provide a
+more comprehensive understanding of the
+walking and cycling habits across different
+countries.
+-
+-
+Source: Chine Nacional Duaswy of Starimicy
+-
+Identify any unusual or
+unexpected data points in the
+chart.
+Is there a correlation between the ranking
+in 'Starting a business' and 'Enforcing
+Contract' for the countries shown?

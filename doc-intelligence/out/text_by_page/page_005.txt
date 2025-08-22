@@ -1,0 +1,171 @@
+Model
+#Params
+aug.
+human
+avg.
+ChartFC ChartCheck T1 ChartCheck T2
+Specialist Chart Models
+ChartBERT (Akhtar et al., 2023a)
+63.8
+Pix2Struct (Lee et al., 2022)
+282M
+81.6
+30.5
+56.0
+-
+-
+-
+Matcha(Liu et al., 2022)
+282M
+90.2
+38.2
+64.2
+62.80
+61.40
+UniChart (Masry et al., 2023)
+201M
+88.56
+43.92
+66.24
+-
+-
+-
+Closed VLMMs
+Gemini Pro (Team et al., 2023)
+74.1
+65.8
+GPT4-V (OpenAI, 2023)
+78.5
+69.6
+Chart VLLMs
+ChartLlama (Han et al., 2023)
+13B
+90.36
+48.96
+69.66
+ChartAssisstant (Meng et al., 2024)
+13B
+93.90
+65.90
+79.90
+ChartInstruct-Llama2 (Masry et al., 2024)
+7B
+87.76
+45.52
+66.64
+69.57
+70.11
+68.80
+ChartInstruct-Flan-T5-XL (Masry et al., 2024)
+3B
+85.04
+43.36
+64.20
+70.27
+72.03
+73.80
+ChartGemma (Ours)
+3B
+90.80
+69.52
+80.16
+70.33
+71.50
+74.31
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Table 2: Performance on closed-ended generation benchmarks: ChartQA, ChartFC, and ChartCheck. ChartGemma generally
+outperforms or matches the performance of all the baselines, while being significantly smaller than them (refer to § 4.2).
+restricted styles and diversity. In contrast, our back-
+bone, PaliGemma, has been trained end-to-end on
+10 billion image-text pairs covering a wide variety
+of styles. This makes our model more adaptable
+and generalizable to different real-world images
+(e.g., charts, infographics, documents). We freeze
+the vision encoder and only finetune the LLM dur-
+ing instruction-tuning. This helps in reducing the
+computational complexity and also improves train-
+ing stability given the small batch size used for
+instruction-tuning PaliGemma.
+4 Experiments, Results, and Analyses
+4.1 Experimental Setup
+Baselines We compare ChartGemma against
+baselines comprising of open-source chart-
+specialist models and VLLMs instruction-tuned
+on chart data, as well as state-of-the-art closed
+source multimodal LLMs.
+Chart-specialist
+models include
+ChartBERT (Akhtar et al.,
+2023c), Pix2Struct (Lee et al., 2022), MatCha
+(Liu et al., 2022), and UniChart (Masry et al.,
+2023). Chart VLLMs include ChartLlaMA (Han
+et al., 2023), ChartAssistant (Meng et al., 2024),
+and ChartInstruct's (Masry et al., 2024) two
+variants with LLaMA2 and Flan-T5-XL. We also
+compare ChartGemma against two closed-source
+multimodal LLMs, namely Gemini Pro (Team
+et al., 2023) and GPT4-V (OpenAI, 2023).
+Downstream Tasks We evaluate ChartGemma
+on a diverse set of 5 established benchmarks eval-
+uating chart representation and reasoning abili-
+ties: (i) ChartQA (Masry et al., 2022b) - a fac-
+toid chart question answering dataset, (ii) ChartFC
+(Akhtar et al., 2023a) and (iii) ChartCheck (Akhtar
+et al., 2023b) - chart fact checking datasets, (iv)
+OpenCQA (Kantharaj et al., 2022) - an open-
+ended chart question answering dataset, and (v)
+Chart2Text (Shankar et al., 2022) - a chart sum-
+marization dataset. While ChartQA and ChartFC
+focus on closed-ended generation, OpenCQA and
+Chart2Text evaluate open-ended generation abil-
+ities of the models. We also manually curate a
+set of 100 charts downloaded from the web com-
+pletely unseen by any model. We refer to this set as
+'Web' in our results, and use them for comparing
+the summarization ability of the models.
+Evaluation Metrics Following existing works,
+we use relaxed accuracy (RA) for ChartQA, ac-
+curacy for ChartFC, and use GPT4 as a judge
+for open-ended generation tasks, i.e. Chart2Text,
+OpenCQA, and our curated Web set of charts and
+measure the informativeness and factual correct-
+ness on a scale of 1-5 (Post, 2018).
+To ensure the reproducibility of our work, we
+present the hyperparameters of our instruction-
+tuning and downstream task experiments in § B.1.
+All experiments were conducted on a 4 A100 GPUS
+(80GB) machine using the JAX framework".
+4.2 Performance on closed-ended tasks
+We compare the performance of ChartGemma to
+the various baselines on the closed-ended tasks,
+namely ChartQA and ChartFC, and present the
+results in Table 2. We see that Chart VLLMs
+are generally the better performing set of mod-
+els compared to specialist chart models. Within
+1https://github.com/google/jax
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+ChartQA
+(Relaxed Accuracy)
+Chart Fact Checking
+(Accuracy)

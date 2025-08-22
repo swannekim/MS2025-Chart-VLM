@@ -1,0 +1,16 @@
+{
+  "file": "samples\\2407.04172v2.pdf",
+  "ocr_pages": 18,
+  "ocr_lines": 2430,
+  "ocr_text_chars": 82074,
+  "sample_lines": [
+    "ChartGemma: Visual Instruction-tuning for Chart Reasoning in the Wild",
+    "Ahmed Masry **",
+    "Megh Thakkar",
+    "*",
+    "Aayush Bajaj"
+  ],
+  "figures_detected": 22,
+  "figures_saved_png": 22,
+  "searchable_pdf_saved": false
+}
