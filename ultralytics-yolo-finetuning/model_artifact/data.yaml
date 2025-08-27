@@ -1,6 +1,0 @@
-train: /afh/projects/chartvllm-workspace-e50dcc49-4202-489d-ae4f-22f8078e2c70/shared/Users/t-yooyeunkim/ultralytics-yolo/data/train
-val: /afh/projects/chartvllm-workspace-e50dcc49-4202-489d-ae4f-22f8078e2c70/shared/Users/t-yooyeunkim/ultralytics-yolo/data/val
-test: /afh/projects/chartvllm-workspace-e50dcc49-4202-489d-ae4f-22f8078e2c70/shared/Users/t-yooyeunkim/ultralytics-yolo/data/test
-names:
-  0: chart
-  1: nonchart

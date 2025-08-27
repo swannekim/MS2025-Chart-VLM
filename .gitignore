@@ -1,5 +1,6 @@
 .env
 ChartQA-Dataset
+data_tiny
 .ipynb_aml_checkpoints
 *.amltmp 
 *.amltemp
