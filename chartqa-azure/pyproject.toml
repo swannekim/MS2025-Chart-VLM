@@ -1,0 +1,18 @@
+[project]
+name = "chartqa-azure"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "azure-ai-documentintelligence>=1.0.2",
+    "azure-storage-blob>=12.26.0",
+    "fastapi>=0.116.1",
+    "numpy>=2.3.2",
+    "openai>=1.105.0",
+    "pillow>=11.3.0",
+    "starlette>=0.47.3",
+    "streamlit>=1.49.1",
+    "torch>=2.8.0",
+    "uvicorn[standard]>=0.35.0",
+]
