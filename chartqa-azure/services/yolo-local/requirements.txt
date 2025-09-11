@@ -1,0 +1,11 @@
+fastapi>=0.111
+uvicorn[standard]>=0.30
+pillow>=10.3
+python-dotenv>=1.0
+numpy>=1.26
+
+# 선택 백엔드:
+ultralytics==8.3.186
+torch>=2.2
+
+onnxruntime>=1.17
