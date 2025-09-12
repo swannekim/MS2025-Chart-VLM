@@ -1,6 +1,62 @@
 # MS2025-Chart-VLLM
 Chart VLLM with MS Azure: CAIP SE intern
 
+Here’s a tightened-up replacement for just the **Folder details** section—drop it in as-is and keep your Reference section unchanged.
+
+---
+
+## Folder details
+
+1. **`chartqa-azure/` — Core application**
+
+   * **`orchestrator/`**: FastAPI API that runs DI (read/layout/figures), builds contextual crops, scores page relevance, and routes to YOLO → ChartGemma (chart route) or Azure OpenAI (text route).
+   * **`clients.py` / `routing.py`** live here with lightweight service clients and the routing heuristic.
+   * **`streamlit_app/`**: Minimal UI to upload a PDF, ask a question, and view the chosen route, answer, crop preview, and metadata.
+   * **`services/yolo-local/`**: Optional local YOLO11 classifier for dev (`python -m services.yolo-local.src.server`).
+
+2. **`data-asset/` — ChartQA as Azure ML data assets**
+
+   * Scripts/notebooks to register the ChartQA dataset (train/val/test) as AML data assets.
+   * Raw dataset directory is **gitignored**; expected layout below for reference:
+
+   ```markdown
+   ├── ChartQA Dataset                   
+   │   ├── train   
+   │   │   ├── train_augmented.json # ChartQA-M (machine-generated) questions/answers. 
+   │   │   ├── train_human.json     # ChartQA-H (human-authored) questions/answers. 
+   │   │   ├── annotations           # Chart Images Annotations Folder
+   │   │   │   ├── chart1_name.json
+   │   │   │   ├── chart2_name.json
+   │   │   │   ├── ...
+   │   │   ├── png                   # Chart Images Folder
+   │   │   │   ├── chart1_name.png
+   │   │   │   ├── chart2_name.png
+   │   │   │   ├── ...
+   │   │   ├── tables                # Underlying Data Tables Folder
+   │   │   │   ├── chart1_name.csv
+   │   │   │   ├── chart2_name.csv
+   │   │   │   ├── ...
+   │   └── val  
+   │   │   │   ...
+   │   │   │   ...
+   │   └── test  
+   │   │   │   ...
+   │   │   │   ...
+   │   │   |   ...
+   ```
+
+3. **`doc-intelligence/` — DI sandboxes**
+
+   * Quick experiments for Azure Document Intelligence: OCR, figure extraction, page-image retrieval, and cropping helpers used by the orchestrator.
+
+4. **`model-deployment/` — ChartGemma on AML (real-time)**
+
+   * Deployment artifacts/configs for serving ChartGemma via Azure ML Managed Online Endpoints (TGI-style), plus example request payloads.
+
+5. **`yolov11-cls-finetuning/` — Chart/non-chart classifier**
+
+   * Azure ML notebooks for fine-tuning YOLOv11 classification; exported endpoint URL/keys are consumed by the orchestrator’s YOLO client.
+
 ## Reference
 ```markdown
 @inproceedings{masry-etal-2022-chartqa,

@@ -262,55 +262,6 @@ def call_chartgemma(chart_b64: str, prompt: str) -> tuple[str, dict]:
 
     return ("Chart model call failed.", {"mode_used": "error", "url": CG_URL, "b64_slim": slim_info, "tried": tried})
 
-
-# # =========================
-# # ChartGemma (TGI-like)
-# # =========================
-
-# CG_URL: Optional[str] = os.getenv("CHARTGEMMA_URL")       # e.g., http://host:port/generate
-# CG_KEY: str = os.getenv("CHARTGEMMA_KEY", "")
-# CG_TIMEOUT: int = int(os.getenv("CHARTGEMMA_TIMEOUT", "120"))
-
-# def _normalize_tgi_response(j: dict | list) -> str:
-#     """
-#     다양한 TGI 변형 응답을 관대하게 파싱.
-#     """
-#     if isinstance(j, list):
-#         if j and isinstance(j[0], dict):
-#             for k in ("generated_text", "output_text", "text"):
-#                 if k in j[0]:
-#                     return str(j[0][k])
-#             # 일부 서버는 choices 형태
-#             ch = j[0].get("choices")
-#             if isinstance(ch, list) and ch and "text" in ch[0]:
-#                 return str(ch[0]["text"])
-#     elif isinstance(j, dict):
-#         for k in ("generated_text", "output_text", "text"):
-#             if k in j:
-#                 return str(j[k])
-#         ch = j.get("choices")
-#         if isinstance(ch, list) and ch and "text" in ch[0]:
-#             return str(ch[0]["text"])
-#     # 안전한 fallback: 원본 json 문자열 일부
-#     return json.dumps(j, ensure_ascii=False)[:4000]
-
-# def call_chartgemma(chart_b64: str, prompt: str) -> str:
-#     if not CG_URL:
-#         return "[ChartGemma not configured: set CHARTGEMMA_URL]"
-#     data_uri = f"data:image/png;base64,{chart_b64}"
-#     # 다수 TGI 서버가 'inputs' 방식 지원. 불가 시 서버 로그 참고.
-#     payload = {"inputs": f"![]({data_uri})\n{prompt}\n\n"}
-#     headers = {"Content-Type": "application/json", "Accept": "application/json"}
-#     if CG_KEY:
-#         headers["Authorization"] = f"Bearer {CG_KEY}"
-#     r = requests.post(CG_URL, headers=headers, json=payload, timeout=CG_TIMEOUT)
-#     r.raise_for_status()
-#     try:
-#         j = r.json()
-#     except Exception:
-#         return r.text[:4000]
-#     return _normalize_tgi_response(j)
-
 # =========================
 # Azure OpenAI (text route)
 # =========================
