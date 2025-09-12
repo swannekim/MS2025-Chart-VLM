@@ -1,8 +1,6 @@
 # MS2025-Chart-VLLM
 Chart VLLM with MS Azure: CAIP SE intern
 
-Here’s a tightened-up replacement for just the **Folder details** section—drop it in as-is and keep your Reference section unchanged.
-
 ---
 
 ## Folder details
