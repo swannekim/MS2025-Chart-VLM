@@ -1,5 +1,5 @@
-# MS2025-Chart-VLLM
-Chart VLLM with MS Azure: CAIP SE intern
+# MS2025-Chart-VLM
+Chart VLM with MS Azure: CAIP SE intern
 
 ---
 
